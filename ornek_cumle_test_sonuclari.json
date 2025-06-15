@@ -1,0 +1,2193 @@
+{
+  "test_date": "2025-06-15T23:11:10.945166",
+  "test_scenarios": {
+    "basit_cumleler": [
+      {
+        "sentence": "Ali okula gitti .",
+        "focus": "Temel özne-nesne-yüklem yapısı",
+        "expected": [
+          "Noun",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Ali",
+              "Noun"
+            ],
+            [
+              "okula",
+              "Noun"
+            ],
+            [
+              "gitti",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Ali",
+              "Adj"
+            ],
+            [
+              "okula",
+              "Noun_Nom"
+            ],
+            [
+              "gitti",
+              "Noun_Nom"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Ali",
+              "Noun"
+            ],
+            [
+              "okula",
+              "Noun"
+            ],
+            [
+              "gitti",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 75.0,
+          "fine_tuned": 25.0,
+          "berturk": 75.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 3,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Adj": 1,
+            "Noun_Nom": 2,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 3,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Kitap masada .",
+        "focus": "Basit var cümlesi",
+        "expected": [
+          "Noun",
+          "Noun",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Kitap",
+              "Noun"
+            ],
+            [
+              "masada",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Kitap",
+              "Noun_Nom"
+            ],
+            [
+              "masada",
+              "Noun_Loc"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Kitap",
+              "Noun"
+            ],
+            [
+              "masada",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 100.0,
+          "fine_tuned": 33.33333333333333,
+          "berturk": 100.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 2,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 1,
+            "Noun_Loc": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 2,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Bu çok güzel .",
+        "focus": "Zamir + zarf + sıfat yapısı",
+        "expected": [
+          "Pron",
+          "Adv",
+          "Adj",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Bu",
+              "Det"
+            ],
+            [
+              "çok",
+              "Adv"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "çok",
+              "Adv"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "çok",
+              "Adv"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 75.0,
+          "fine_tuned": 100.0,
+          "berturk": 100.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Det": 1,
+            "Adv": 1,
+            "Adj": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Pron": 1,
+            "Adv": 1,
+            "Adj": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Pron": 1,
+            "Adv": 1,
+            "Adj": 1,
+            "Punc": 1
+          }
+        }
+      }
+    ],
+    "karmasik_cumleler": [
+      {
+        "sentence": "Öğrenciler dersten sonra kütüphaneye giderek ders çalıştılar .",
+        "focus": "Zarf tümleci + birleşik fiil yapısı",
+        "expected": [
+          "Noun",
+          "Noun",
+          "Postp",
+          "Noun",
+          "Verb",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Öğrenciler",
+              "Noun"
+            ],
+            [
+              "dersten",
+              "Noun"
+            ],
+            [
+              "sonra",
+              "Adv"
+            ],
+            [
+              "kütüphaneye",
+              "Noun"
+            ],
+            [
+              "giderek",
+              "Noun"
+            ],
+            [
+              "ders",
+              "Noun"
+            ],
+            [
+              "çalıştılar",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Öğrenciler",
+              "Noun_Nom"
+            ],
+            [
+              "dersten",
+              "Noun_Nom"
+            ],
+            [
+              "sonra",
+              "Adv"
+            ],
+            [
+              "kütüphaneye",
+              "Noun_Nom"
+            ],
+            [
+              "giderek",
+              "Noun_Nom"
+            ],
+            [
+              "ders",
+              "Noun_Nom"
+            ],
+            [
+              "çalıştılar",
+              "Noun_Nom"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Öğrenciler",
+              "Noun"
+            ],
+            [
+              "dersten",
+              "Noun"
+            ],
+            [
+              "sonra",
+              "Adv"
+            ],
+            [
+              "kütüphaneye",
+              "Noun"
+            ],
+            [
+              "giderek",
+              "Noun"
+            ],
+            [
+              "ders",
+              "Noun"
+            ],
+            [
+              "çalıştılar",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 62.5,
+          "fine_tuned": 12.5,
+          "berturk": 62.5
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 6,
+            "Adv": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 6,
+            "Adv": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 6,
+            "Adv": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Geçen yıl Ankara'da çalışan mühendis İstanbul'a taşındı .",
+        "focus": "Sıfat tümleci + yer adları",
+        "expected": [
+          "Adj",
+          "Noun",
+          "Noun",
+          "Verb",
+          "Noun",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Geçen",
+              "Noun"
+            ],
+            [
+              "yıl",
+              "Noun"
+            ],
+            [
+              "Ankara'da",
+              "Noun"
+            ],
+            [
+              "çalışan",
+              "Noun"
+            ],
+            [
+              "mühendis",
+              "Noun"
+            ],
+            [
+              "İstanbul'a",
+              "Noun"
+            ],
+            [
+              "taşındı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Geçen",
+              "Noun_Nom"
+            ],
+            [
+              "yıl",
+              "Noun_Nom"
+            ],
+            [
+              "Ankara'da",
+              "Noun_Loc"
+            ],
+            [
+              "çalışan",
+              "Noun_Nom"
+            ],
+            [
+              "mühendis",
+              "Noun_Nom"
+            ],
+            [
+              "İstanbul'a",
+              "Noun_Nom"
+            ],
+            [
+              "taşındı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Geçen",
+              "Noun"
+            ],
+            [
+              "yıl",
+              "Noun"
+            ],
+            [
+              "Ankara'da",
+              "Noun"
+            ],
+            [
+              "çalışan",
+              "Noun"
+            ],
+            [
+              "mühendis",
+              "Noun"
+            ],
+            [
+              "İstanbul'a",
+              "Noun"
+            ],
+            [
+              "taşındı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 75.0,
+          "fine_tuned": 25.0,
+          "berturk": 75.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 6,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 5,
+            "Noun_Loc": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 6,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Bugün hava çok soğuk olduğu için dışarı çıkmadık .",
+        "focus": "Sebep-sonuç bağlacı",
+        "expected": [
+          "Adv",
+          "Noun",
+          "Adv",
+          "Adj",
+          "Verb",
+          "Conj",
+          "Adv",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Bugün",
+              "Noun"
+            ],
+            [
+              "hava",
+              "Noun"
+            ],
+            [
+              "çok",
+              "Adv"
+            ],
+            [
+              "soğuk",
+              "Adj"
+            ],
+            [
+              "olduğu",
+              "Noun"
+            ],
+            [
+              "için",
+              "Postp"
+            ],
+            [
+              "dışarı",
+              "Noun"
+            ],
+            [
+              "çıkmadık",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Bugün",
+              "Adv"
+            ],
+            [
+              "hava",
+              "Noun_Nom"
+            ],
+            [
+              "çok",
+              "Adv"
+            ],
+            [
+              "soğuk",
+              "Noun_Nom"
+            ],
+            [
+              "olduğu",
+              "Noun_Nom"
+            ],
+            [
+              "için",
+              "Postp"
+            ],
+            [
+              "dışarı",
+              "Noun_Nom"
+            ],
+            [
+              "çıkmadık",
+              "Noun_Nom"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Bugün",
+              "Noun"
+            ],
+            [
+              "hava",
+              "Noun"
+            ],
+            [
+              "çok",
+              "Adv"
+            ],
+            [
+              "soğuk",
+              "Adj"
+            ],
+            [
+              "olduğu",
+              "Noun"
+            ],
+            [
+              "için",
+              "Postp"
+            ],
+            [
+              "dışarı",
+              "Noun"
+            ],
+            [
+              "çıkmadık",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 44.44444444444444,
+          "fine_tuned": 33.33333333333333,
+          "berturk": 44.44444444444444
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 4,
+            "Adv": 1,
+            "Adj": 2,
+            "Postp": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Adv": 2,
+            "Noun_Nom": 5,
+            "Postp": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 4,
+            "Adv": 1,
+            "Adj": 2,
+            "Postp": 1,
+            "Punc": 1
+          }
+        }
+      }
+    ],
+    "morfological_cases": [
+      {
+        "sentence": "Öğretmen öğrenciye kitabı verdi .",
+        "focus": "Yönelme hali (-e/-a)",
+        "expected": [
+          "Noun",
+          "Noun_Dat",
+          "Noun_Acc",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Öğretmen",
+              "Noun"
+            ],
+            [
+              "öğrenciye",
+              "Noun"
+            ],
+            [
+              "kitabı",
+              "Noun"
+            ],
+            [
+              "verdi",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Öğretmen",
+              "Noun_Nom"
+            ],
+            [
+              "öğrenciye",
+              "Noun_Nom"
+            ],
+            [
+              "kitabı",
+              "Noun_Nom"
+            ],
+            [
+              "verdi",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Öğretmen",
+              "Noun"
+            ],
+            [
+              "öğrenciye",
+              "Noun"
+            ],
+            [
+              "kitabı",
+              "Noun"
+            ],
+            [
+              "verdi",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 60.0,
+          "fine_tuned": 40.0,
+          "berturk": 60.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 3,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 3,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 3,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Çocuk oyuncağını çantasından çıkardı .",
+        "focus": "Çıkma hali (-den/-dan)",
+        "expected": [
+          "Noun",
+          "Noun_Acc",
+          "Noun_Abl",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Çocuk",
+              "Noun"
+            ],
+            [
+              "oyuncağını",
+              "Noun"
+            ],
+            [
+              "çantasından",
+              "Noun"
+            ],
+            [
+              "çıkardı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Çocuk",
+              "Noun_Nom"
+            ],
+            [
+              "oyuncağını",
+              "Noun_Acc"
+            ],
+            [
+              "çantasından",
+              "Noun_Abl"
+            ],
+            [
+              "çıkardı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Çocuk",
+              "Noun"
+            ],
+            [
+              "oyuncağını",
+              "Noun"
+            ],
+            [
+              "çantasından",
+              "Noun"
+            ],
+            [
+              "çıkardı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 60.0,
+          "fine_tuned": 80.0,
+          "berturk": 60.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 3,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 1,
+            "Noun_Acc": 1,
+            "Noun_Abl": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 3,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Ailemin evinde mutlu günler geçirdik .",
+        "focus": "Tamlayan + bulunma hali",
+        "expected": [
+          "Noun_Gen",
+          "Noun_Loc",
+          "Adj",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Ailemin",
+              "Noun"
+            ],
+            [
+              "evinde",
+              "Noun"
+            ],
+            [
+              "mutlu",
+              "Adj"
+            ],
+            [
+              "günler",
+              "Noun"
+            ],
+            [
+              "geçirdik",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Ailemin",
+              "Noun_Gen"
+            ],
+            [
+              "evinde",
+              "Noun_Loc"
+            ],
+            [
+              "mutlu",
+              "Adj"
+            ],
+            [
+              "günler",
+              "Noun_Nom"
+            ],
+            [
+              "geçirdik",
+              "Noun_Nom"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Ailemin",
+              "Noun"
+            ],
+            [
+              "evinde",
+              "Noun"
+            ],
+            [
+              "mutlu",
+              "Adj"
+            ],
+            [
+              "günler",
+              "Noun"
+            ],
+            [
+              "geçirdik",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 50.0,
+          "fine_tuned": 66.66666666666666,
+          "berturk": 50.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 3,
+            "Adj": 2,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Gen": 1,
+            "Noun_Loc": 1,
+            "Adj": 1,
+            "Noun_Nom": 2,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 3,
+            "Adj": 2,
+            "Punc": 1
+          }
+        }
+      }
+    ],
+    "academic_technical": [
+      {
+        "sentence": "Bu araştırmada makine öğrenmesi algoritmaları kullanılmıştır .",
+        "focus": "Akademik terminoloji",
+        "expected": [
+          "Pron",
+          "Noun",
+          "Noun",
+          "Noun",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "araştırmada",
+              "Noun"
+            ],
+            [
+              "makine",
+              "Noun"
+            ],
+            [
+              "öğrenmesi",
+              "Noun"
+            ],
+            [
+              "algoritmaları",
+              "Noun"
+            ],
+            [
+              "kullanılmıştır",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "araştırmada",
+              "Noun_Loc"
+            ],
+            [
+              "makine",
+              "Noun_Dat"
+            ],
+            [
+              "öğrenmesi",
+              "Noun_Nom"
+            ],
+            [
+              "algoritmaları",
+              "Noun_Nom"
+            ],
+            [
+              "kullanılmıştır",
+              "Noun_Nom"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "araştırmada",
+              "Noun"
+            ],
+            [
+              "makine",
+              "Noun"
+            ],
+            [
+              "öğrenmesi",
+              "Noun"
+            ],
+            [
+              "algoritmaları",
+              "Noun"
+            ],
+            [
+              "kullanılmıştır",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 85.71428571428571,
+          "fine_tuned": 28.57142857142857,
+          "berturk": 85.71428571428571
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Pron": 1,
+            "Noun": 5,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Pron": 1,
+            "Noun_Loc": 1,
+            "Noun_Dat": 1,
+            "Noun_Nom": 3,
+            "Punc": 1
+          },
+          "berturk": {
+            "Pron": 1,
+            "Noun": 5,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Doğal dil işleme teknikleri metin analizi için geliştirildi .",
+        "focus": "Teknik terimler",
+        "expected": [
+          "Adj",
+          "Noun",
+          "Noun",
+          "Noun",
+          "Noun",
+          "Noun",
+          "Conj",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Doğal",
+              "Noun"
+            ],
+            [
+              "dil",
+              "Noun"
+            ],
+            [
+              "işleme",
+              "Noun"
+            ],
+            [
+              "teknikleri",
+              "Noun"
+            ],
+            [
+              "metin",
+              "Noun"
+            ],
+            [
+              "analizi",
+              "Noun"
+            ],
+            [
+              "için",
+              "Postp"
+            ],
+            [
+              "geliştirildi",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Doğal",
+              "Noun_Nom"
+            ],
+            [
+              "dil",
+              "Noun_Nom"
+            ],
+            [
+              "işleme",
+              "Noun_Nom"
+            ],
+            [
+              "teknikleri",
+              "Noun_Nom"
+            ],
+            [
+              "metin",
+              "Noun_Gen"
+            ],
+            [
+              "analizi",
+              "Noun_Nom"
+            ],
+            [
+              "için",
+              "Postp"
+            ],
+            [
+              "geliştirildi",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Doğal",
+              "Noun"
+            ],
+            [
+              "dil",
+              "Noun"
+            ],
+            [
+              "işleme",
+              "Noun"
+            ],
+            [
+              "teknikleri",
+              "Noun"
+            ],
+            [
+              "metin",
+              "Noun"
+            ],
+            [
+              "analizi",
+              "Noun"
+            ],
+            [
+              "için",
+              "Postp"
+            ],
+            [
+              "geliştirildi",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 77.77777777777779,
+          "fine_tuned": 22.22222222222222,
+          "berturk": 77.77777777777779
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 6,
+            "Postp": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 5,
+            "Noun_Gen": 1,
+            "Postp": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 6,
+            "Postp": 1,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Algoritmanın performansı %95 doğruluk oranında ölçüldü .",
+        "focus": "Sayısal değerler + akademik ifadeler",
+        "expected": [
+          "Noun",
+          "Noun",
+          "Num",
+          "Noun",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Algoritmanın",
+              "Noun"
+            ],
+            [
+              "performansı",
+              "Noun"
+            ],
+            [
+              "%95",
+              "Noun"
+            ],
+            [
+              "doğruluk",
+              "Noun"
+            ],
+            [
+              "oranında",
+              "Noun"
+            ],
+            [
+              "ölçüldü",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Algoritmanın",
+              "Noun_Gen"
+            ],
+            [
+              "performansı",
+              "Noun_Nom"
+            ],
+            [
+              "%95",
+              "Noun_Nom"
+            ],
+            [
+              "doğruluk",
+              "Noun_Nom"
+            ],
+            [
+              "oranında",
+              "Noun_Loc"
+            ],
+            [
+              "ölçüldü",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Algoritmanın",
+              "Noun"
+            ],
+            [
+              "performansı",
+              "Noun"
+            ],
+            [
+              "%95",
+              "Noun"
+            ],
+            [
+              "doğruluk",
+              "Noun"
+            ],
+            [
+              "oranında",
+              "Noun"
+            ],
+            [
+              "ölçüldü",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 85.71428571428571,
+          "fine_tuned": 28.57142857142857,
+          "berturk": 85.71428571428571
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 5,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Gen": 1,
+            "Noun_Nom": 3,
+            "Noun_Loc": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 5,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      }
+    ],
+    "edge_cases": [
+      {
+        "sentence": "COVID-19 pandemisi 2020'de başladı .",
+        "focus": "Kısaltmalar ve sayılar",
+        "expected": [
+          "Noun",
+          "Noun",
+          "Num",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "COVID-19",
+              "Noun"
+            ],
+            [
+              "pandemisi",
+              "Noun"
+            ],
+            [
+              "2020'de",
+              "Noun"
+            ],
+            [
+              "başladı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "COVID-19",
+              "Noun_Nom"
+            ],
+            [
+              "pandemisi",
+              "Noun_Nom"
+            ],
+            [
+              "2020'de",
+              "Noun_Loc"
+            ],
+            [
+              "başladı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "COVID-19",
+              "Noun"
+            ],
+            [
+              "pandemisi",
+              "Noun"
+            ],
+            [
+              "2020'de",
+              "Noun"
+            ],
+            [
+              "başladı",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 80.0,
+          "fine_tuned": 40.0,
+          "berturk": 80.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 3,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 2,
+            "Noun_Loc": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 3,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "E-posta adresini example@test.com olarak güncelledim .",
+        "focus": "İnternet terimleri",
+        "expected": [
+          "Noun",
+          "Noun",
+          "Noun",
+          "Conj",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "E-posta",
+              "Noun"
+            ],
+            [
+              "adresini",
+              "Noun"
+            ],
+            [
+              "example@test.com",
+              "Noun"
+            ],
+            [
+              "olarak",
+              "Noun"
+            ],
+            [
+              "güncelledim",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "E-posta",
+              "Noun_Loc"
+            ],
+            [
+              "adresini",
+              "Noun_Acc"
+            ],
+            [
+              "example@test.com",
+              "Noun_Nom"
+            ],
+            [
+              "olarak",
+              "Noun_Nom"
+            ],
+            [
+              "güncelledim",
+              "Noun_Nom"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "E-posta",
+              "Noun"
+            ],
+            [
+              "adresini",
+              "Noun"
+            ],
+            [
+              "example@test.com",
+              "Noun"
+            ],
+            [
+              "olarak",
+              "Noun"
+            ],
+            [
+              "güncelledim",
+              "Noun"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 66.66666666666666,
+          "fine_tuned": 16.666666666666664,
+          "berturk": 66.66666666666666
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 5,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Loc": 1,
+            "Noun_Acc": 1,
+            "Noun_Nom": 3,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 5,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Ah ! Ne kadar güzel bir manzara !",
+        "focus": "Ünlemler ve duygu ifadeleri",
+        "expected": [
+          "Intj",
+          "Punc",
+          "Pron",
+          "Adv",
+          "Adj",
+          "Det",
+          "Noun",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Ah",
+              "Noun"
+            ],
+            [
+              "!",
+              "Punc"
+            ],
+            [
+              "Ne",
+              "Noun"
+            ],
+            [
+              "kadar",
+              "Postp"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              "bir",
+              "Det"
+            ],
+            [
+              "manzara",
+              "Noun"
+            ],
+            [
+              "!",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Ah",
+              "Noun_Nom"
+            ],
+            [
+              "!",
+              "Punc"
+            ],
+            [
+              "Ne",
+              "Noun_Nom"
+            ],
+            [
+              "kadar",
+              "Postp"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              "bir",
+              "Noun_Nom"
+            ],
+            [
+              "manzara",
+              "Noun_Nom"
+            ],
+            [
+              "!",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Ah",
+              "Noun"
+            ],
+            [
+              "!",
+              "Punc"
+            ],
+            [
+              "Ne",
+              "Noun"
+            ],
+            [
+              "kadar",
+              "Postp"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              "bir",
+              "Det"
+            ],
+            [
+              "manzara",
+              "Noun"
+            ],
+            [
+              "!",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 62.5,
+          "fine_tuned": 37.5,
+          "berturk": 62.5
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 3,
+            "Punc": 2,
+            "Postp": 1,
+            "Adj": 1,
+            "Det": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 4,
+            "Punc": 2,
+            "Postp": 1,
+            "Adj": 1
+          },
+          "berturk": {
+            "Noun": 3,
+            "Punc": 2,
+            "Postp": 1,
+            "Adj": 1,
+            "Det": 1
+          }
+        }
+      }
+    ],
+    "question_forms": [
+      {
+        "sentence": "Bu kitabı kim yazdı ?",
+        "focus": "Kim soru kelimesi",
+        "expected": [
+          "Pron",
+          "Noun",
+          "Pron",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Bu",
+              "Det"
+            ],
+            [
+              "kitabı",
+              "Noun_Nom"
+            ],
+            [
+              "kim",
+              "Pron"
+            ],
+            [
+              "yazdı",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "kitabı",
+              "Noun_Nom"
+            ],
+            [
+              "kim",
+              "Noun_Nom"
+            ],
+            [
+              "yazdı",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "kitabı",
+              "Noun"
+            ],
+            [
+              "kim",
+              "Noun"
+            ],
+            [
+              "yazdı",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 60.0,
+          "fine_tuned": 60.0,
+          "berturk": 80.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Det": 1,
+            "Noun_Nom": 1,
+            "Pron": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Pron": 1,
+            "Noun_Nom": 2,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Pron": 1,
+            "Noun": 2,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Nereye gidiyorsun ?",
+        "focus": "Nere- soru kökü + yönelme hali",
+        "expected": [
+          "Pron",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Nereye",
+              "Noun"
+            ],
+            [
+              "gidiyorsun",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Nereye",
+              "Noun_Nom"
+            ],
+            [
+              "gidiyorsun",
+              "Noun_Gen"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Nereye",
+              "Noun"
+            ],
+            [
+              "gidiyorsun",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 66.66666666666666,
+          "fine_tuned": 33.33333333333333,
+          "berturk": 66.66666666666666
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 1,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 1,
+            "Noun_Gen": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 1,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      },
+      {
+        "sentence": "Hangi üniverṡitede okuyorsun ?",
+        "focus": "Hangi sıfatı + bulunma hali",
+        "expected": [
+          "Det",
+          "Noun",
+          "Verb",
+          "Punc"
+        ],
+        "results": {
+          "legacy": [
+            [
+              "Hangi",
+              "Noun"
+            ],
+            [
+              "üniverṡitede",
+              "Noun"
+            ],
+            [
+              "okuyorsun",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ],
+          "fine_tuned": [
+            [
+              "Hangi",
+              "Noun_Nom"
+            ],
+            [
+              "üniverṡitede",
+              "Noun_Loc"
+            ],
+            [
+              "okuyorsun",
+              "Noun_Gen"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ],
+          "berturk": [
+            [
+              "Hangi",
+              "Noun"
+            ],
+            [
+              "üniverṡitede",
+              "Noun"
+            ],
+            [
+              "okuyorsun",
+              "Verb"
+            ],
+            [
+              "?",
+              "Punc"
+            ]
+          ]
+        },
+        "accuracy_scores": {
+          "legacy": 75.0,
+          "fine_tuned": 25.0,
+          "berturk": 75.0
+        },
+        "pos_distribution": {
+          "legacy": {
+            "Noun": 2,
+            "Verb": 1,
+            "Punc": 1
+          },
+          "fine_tuned": {
+            "Noun_Nom": 1,
+            "Noun_Loc": 1,
+            "Noun_Gen": 1,
+            "Punc": 1
+          },
+          "berturk": {
+            "Noun": 2,
+            "Verb": 1,
+            "Punc": 1
+          }
+        }
+      }
+    ]
+  },
+  "comparative_analysis": {
+    "model_performance": {
+      "legacy": {
+        "total_tests": 18,
+        "total_accuracy": 1261.984126984127,
+        "avg_accuracy": 70.11022927689595
+      },
+      "fine_tuned": {
+        "total_tests": 18,
+        "total_accuracy": 707.6984126984125,
+        "avg_accuracy": 39.31657848324514
+      },
+      "berturk": {
+        "total_tests": 18,
+        "total_accuracy": 1306.984126984127,
+        "avg_accuracy": 72.61022927689595
+      }
+    },
+    "pos_tag_usage": {
+      "legacy": {
+        "Noun": 60,
+        "Punc": 19,
+        "Det": 3,
+        "Adv": 3,
+        "Adj": 6,
+        "Verb": 9,
+        "Postp": 3,
+        "Pron": 2,
+        "Noun_Nom": 1
+      },
+      "fine_tuned": {
+        "Adj": 4,
+        "Noun_Nom": 49,
+        "Punc": 19,
+        "Noun_Loc": 8,
+        "Pron": 3,
+        "Adv": 4,
+        "Verb": 7,
+        "Postp": 3,
+        "Noun_Acc": 2,
+        "Noun_Abl": 1,
+        "Noun_Gen": 5,
+        "Noun_Dat": 1
+      },
+      "berturk": {
+        "Noun": 62,
+        "Punc": 19,
+        "Pron": 3,
+        "Adv": 3,
+        "Adj": 6,
+        "Verb": 9,
+        "Postp": 3,
+        "Det": 1
+      }
+    },
+    "scenario_performance": {
+      "basit_cumleler": {
+        "legacy": 83.33333333333333,
+        "fine_tuned": 52.77777777777777,
+        "berturk": 91.66666666666667
+      },
+      "karmasik_cumleler": {
+        "legacy": 60.64814814814815,
+        "fine_tuned": 23.61111111111111,
+        "berturk": 60.64814814814815
+      },
+      "morfological_cases": {
+        "legacy": 56.666666666666664,
+        "fine_tuned": 62.22222222222222,
+        "berturk": 56.666666666666664
+      },
+      "academic_technical": {
+        "legacy": 83.06878306878308,
+        "fine_tuned": 26.455026455026456,
+        "berturk": 83.06878306878308
+      },
+      "edge_cases": {
+        "legacy": 69.72222222222221,
+        "fine_tuned": 31.388888888888886,
+        "berturk": 69.72222222222221
+      },
+      "question_forms": {
+        "legacy": 67.22222222222221,
+        "fine_tuned": 39.44444444444444,
+        "berturk": 73.88888888888889
+      }
+    },
+    "best_model_per_scenario": {
+      "basit_cumleler": {
+        "model": "berturk",
+        "accuracy": 91.66666666666667
+      },
+      "karmasik_cumleler": {
+        "model": "legacy",
+        "accuracy": 60.64814814814815
+      },
+      "morfological_cases": {
+        "model": "fine_tuned",
+        "accuracy": 62.22222222222222
+      },
+      "academic_technical": {
+        "model": "legacy",
+        "accuracy": 83.06878306878308
+      },
+      "edge_cases": {
+        "model": "legacy",
+        "accuracy": 69.72222222222221
+      },
+      "question_forms": {
+        "model": "berturk",
+        "accuracy": 73.88888888888889
+      }
+    }
+  },
+  "summary": {
+    "total_scenarios": 6,
+    "total_sentences": 18,
+    "models_tested": [
+      "legacy",
+      "fine_tuned",
+      "berturk"
+    ]
+  }
+}

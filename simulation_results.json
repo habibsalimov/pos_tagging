@@ -1,0 +1,1465 @@
+{
+  "initialization": {
+    "legacy": {
+      "status": "success",
+      "initialization_time": 0.6782577037811279,
+      "model_info": {
+        "model_type": "legacy",
+        "model_path": "default",
+        "supports_batch": true,
+        "language": "Turkish",
+        "is_fine_tuned": false
+      }
+    },
+    "fine_tuned": {
+      "status": "success",
+      "initialization_time": 0.0005679130554199219,
+      "model_info": {
+        "model_type": "fine_tuned",
+        "model_path": "default",
+        "supports_batch": true,
+        "language": "Turkish",
+        "is_fine_tuned": true,
+        "accuracy": 0.8965129358830146,
+        "f1_score": 0.8706218727662616,
+        "precision": 0.87,
+        "recall": 0.871244635193133,
+        "training_epochs": 5,
+        "pos_tags_count": 18,
+        "pos_tags": [
+          "O",
+          "Noun_Nom",
+          "Noun_Acc",
+          "Noun_Dat",
+          "Noun_Abl",
+          "Noun_Gen",
+          "Noun_Loc",
+          "Verb",
+          "Adj",
+          "Adv",
+          "Pron",
+          "Det",
+          "Num",
+          "Conj",
+          "Postp",
+          "Punc",
+          "Part",
+          "Intj"
+        ]
+      }
+    },
+    "berturk": {
+      "status": "success",
+      "initialization_time": 2.3104000091552734,
+      "model_info": {
+        "model_type": "berturk",
+        "model_path": "default",
+        "supports_batch": true,
+        "language": "Turkish",
+        "is_fine_tuned": false
+      }
+    }
+  },
+  "basic_tagging": {
+    "legacy": {
+      "total_sentences": 10,
+      "total_tokens": 64,
+      "successful_tags": 64,
+      "unique_pos_tags": [
+        "Postp",
+        "Verb",
+        "Pron",
+        "Noun",
+        "Det",
+        "Adj",
+        "Conj",
+        "Punc",
+        "Adv",
+        "Noun_Abl"
+      ],
+      "average_tokens_per_sentence": 6.4,
+      "processing_time": 0.0003809928894042969,
+      "examples": [
+        {
+          "sentence": "Merhaba dünya !",
+          "tagged_result": [
+            [
+              "Merhaba",
+              "Noun"
+            ],
+            [
+              "dünya",
+              "Noun"
+            ],
+            [
+              "!",
+              "Punc"
+            ]
+          ]
+        },
+        {
+          "sentence": "Ali koştu .",
+          "tagged_result": [
+            [
+              "Ali",
+              "Noun"
+            ],
+            [
+              "koştu",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        {
+          "sentence": "Bu kitap güzel .",
+          "tagged_result": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "kitap",
+              "Noun"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        }
+      ]
+    },
+    "fine_tuned": {
+      "total_sentences": 10,
+      "total_tokens": 64,
+      "successful_tags": 64,
+      "unique_pos_tags": [
+        "Noun_Loc",
+        "Postp",
+        "Verb",
+        "Pron",
+        "Noun_Nom",
+        "Noun_Gen",
+        "Adj",
+        "Conj",
+        "Punc",
+        "Adv",
+        "Noun_Abl"
+      ],
+      "average_tokens_per_sentence": 6.4,
+      "processing_time": 0.00010800361633300781,
+      "examples": [
+        {
+          "sentence": "Merhaba dünya !",
+          "tagged_result": [
+            [
+              "Merhaba",
+              "Noun_Nom"
+            ],
+            [
+              "dünya",
+              "Noun_Nom"
+            ],
+            [
+              "!",
+              "Punc"
+            ]
+          ]
+        },
+        {
+          "sentence": "Ali koştu .",
+          "tagged_result": [
+            [
+              "Ali",
+              "Adj"
+            ],
+            [
+              "koştu",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        {
+          "sentence": "Bu kitap güzel .",
+          "tagged_result": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "kitap",
+              "Noun_Nom"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        }
+      ]
+    },
+    "berturk": {
+      "total_sentences": 10,
+      "total_tokens": 64,
+      "successful_tags": 64,
+      "unique_pos_tags": [
+        "Postp",
+        "Verb",
+        "Pron",
+        "Noun",
+        "Det",
+        "Adj",
+        "Conj",
+        "Punc",
+        "Adv"
+      ],
+      "average_tokens_per_sentence": 6.4,
+      "processing_time": 3.5076308250427246,
+      "examples": [
+        {
+          "sentence": "Merhaba dünya !",
+          "tagged_result": [
+            [
+              "Merhaba",
+              "Noun"
+            ],
+            [
+              "dünya",
+              "Noun"
+            ],
+            [
+              "!",
+              "Punc"
+            ]
+          ]
+        },
+        {
+          "sentence": "Ali koştu .",
+          "tagged_result": [
+            [
+              "Ali",
+              "Noun"
+            ],
+            [
+              "koştu",
+              "Verb"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        },
+        {
+          "sentence": "Bu kitap güzel .",
+          "tagged_result": [
+            [
+              "Bu",
+              "Pron"
+            ],
+            [
+              "kitap",
+              "Noun"
+            ],
+            [
+              "güzel",
+              "Adj"
+            ],
+            [
+              ".",
+              "Punc"
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "performance": {
+    "legacy": {
+      "short": {
+        "sentences": 10,
+        "successful_sentences": 10,
+        "total_tokens": 43,
+        "processing_time": 0.0003421306610107422,
+        "tokens_per_second": 125682.97700348432,
+        "sentences_per_second": 29228.59930313589
+      },
+      "medium": {
+        "sentences": 7,
+        "successful_sentences": 7,
+        "total_tokens": 52,
+        "processing_time": 0.0002911090850830078,
+        "tokens_per_second": 178627.19737919737,
+        "sentences_per_second": 24045.968877968877
+      },
+      "long": {
+        "sentences": 2,
+        "successful_sentences": 2,
+        "total_tokens": 23,
+        "processing_time": 7.510185241699219e-05,
+        "tokens_per_second": 306250.7682539683,
+        "sentences_per_second": 26630.501587301587
+      }
+    },
+    "fine_tuned": {
+      "short": {
+        "sentences": 10,
+        "successful_sentences": 10,
+        "total_tokens": 43,
+        "processing_time": 6.389617919921875e-05,
+        "tokens_per_second": 672966.6865671641,
+        "sentences_per_second": 156503.8805970149
+      },
+      "medium": {
+        "sentences": 7,
+        "successful_sentences": 7,
+        "total_tokens": 52,
+        "processing_time": 5.626678466796875e-05,
+        "tokens_per_second": 924168.6779661017,
+        "sentences_per_second": 124407.32203389831
+      },
+      "long": {
+        "sentences": 2,
+        "successful_sentences": 2,
+        "total_tokens": 23,
+        "processing_time": 2.384185791015625e-05,
+        "tokens_per_second": 964689.92,
+        "sentences_per_second": 83886.08
+      }
+    },
+    "berturk": {
+      "short": {
+        "sentences": 10,
+        "successful_sentences": 10,
+        "total_tokens": 43,
+        "processing_time": 0.7029521465301514,
+        "tokens_per_second": 61.170593492391625,
+        "sentences_per_second": 14.225719416835261
+      },
+      "medium": {
+        "sentences": 7,
+        "successful_sentences": 7,
+        "total_tokens": 52,
+        "processing_time": 0.40543365478515625,
+        "tokens_per_second": 128.2577294367814,
+        "sentences_per_second": 17.265463578028264
+      },
+      "long": {
+        "sentences": 2,
+        "successful_sentences": 2,
+        "total_tokens": 23,
+        "processing_time": 0.0254971981048584,
+        "tokens_per_second": 902.0599010687937,
+        "sentences_per_second": 78.4399913972864
+      }
+    }
+  },
+  "batch_processing": {
+    "legacy": {
+      "batch_sentences": 5,
+      "batch_time": 0.00016021728515625,
+      "individual_time": 0.00010895729064941406,
+      "speedup": 0.6800595238095238,
+      "batch_successful": 5,
+      "individual_successful": 5
+    },
+    "fine_tuned": {
+      "batch_sentences": 5,
+      "batch_time": 2.8133392333984375e-05,
+      "individual_time": 2.6702880859375e-05,
+      "speedup": 0.9491525423728814,
+      "batch_successful": 5,
+      "individual_successful": 5
+    },
+    "berturk": {
+      "batch_sentences": 5,
+      "batch_time": 0.10682296752929688,
+      "individual_time": 0.06626296043395996,
+      "speedup": 0.6203063064671642,
+      "batch_successful": 5,
+      "individual_successful": 5
+    }
+  },
+  "edge_cases": {
+    "legacy": {
+      "empty_string": {
+        "status": "success",
+        "input_length": 0,
+        "output_tokens": 0,
+        "result": []
+      },
+      "whitespace_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 0,
+        "result": []
+      },
+      "single_word": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "Tek",
+            "Adj"
+          ]
+        ]
+      },
+      "numbers_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "123",
+            "Num"
+          ]
+        ]
+      },
+      "punctuation_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "!!!",
+            "Noun"
+          ]
+        ]
+      },
+      "very_long_sentence": {
+        "status": "success",
+        "input_length": 270,
+        "output_tokens": 60,
+        "result": [
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ]
+        ]
+      },
+      "special_characters": {
+        "status": "success",
+        "input_length": 39,
+        "output_tokens": 5,
+        "result": [
+          [
+            "Çok",
+            "Noun"
+          ],
+          [
+            "çeşitli",
+            "Adj"
+          ],
+          [
+            "özel",
+            "Noun"
+          ],
+          [
+            "karakterler:",
+            "Noun"
+          ],
+          [
+            "@#$%^&*()",
+            "Noun"
+          ]
+        ]
+      }
+    },
+    "fine_tuned": {
+      "empty_string": {
+        "status": "success",
+        "input_length": 0,
+        "output_tokens": 0,
+        "result": []
+      },
+      "whitespace_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 0,
+        "result": []
+      },
+      "single_word": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "Tek",
+            "Noun_Nom"
+          ]
+        ]
+      },
+      "numbers_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "123",
+            "Noun_Nom"
+          ]
+        ]
+      },
+      "punctuation_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "!!!",
+            "Noun_Nom"
+          ]
+        ]
+      },
+      "very_long_sentence": {
+        "status": "success",
+        "input_length": 270,
+        "output_tokens": 60,
+        "result": [
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Noun_Gen"
+          ],
+          [
+            "bir",
+            "Noun_Nom"
+          ],
+          [
+            "cümle",
+            "Noun_Nom"
+          ]
+        ]
+      },
+      "special_characters": {
+        "status": "success",
+        "input_length": 39,
+        "output_tokens": 5,
+        "result": [
+          [
+            "Çok",
+            "Adv"
+          ],
+          [
+            "çeşitli",
+            "Adj"
+          ],
+          [
+            "özel",
+            "Noun_Nom"
+          ],
+          [
+            "karakterler:",
+            "Noun_Nom"
+          ],
+          [
+            "@#$%^&*()",
+            "Noun_Nom"
+          ]
+        ]
+      }
+    },
+    "berturk": {
+      "empty_string": {
+        "status": "success",
+        "input_length": 0,
+        "output_tokens": 0,
+        "result": []
+      },
+      "whitespace_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 0,
+        "result": []
+      },
+      "single_word": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "Tek",
+            "Noun"
+          ]
+        ]
+      },
+      "numbers_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "123",
+            "Num"
+          ]
+        ]
+      },
+      "punctuation_only": {
+        "status": "success",
+        "input_length": 3,
+        "output_tokens": 1,
+        "result": [
+          [
+            "!!!",
+            "Noun"
+          ]
+        ]
+      },
+      "very_long_sentence": {
+        "status": "success",
+        "input_length": 270,
+        "output_tokens": 60,
+        "result": [
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "çok",
+            "Adv"
+          ],
+          [
+            "uzun",
+            "Adj"
+          ],
+          [
+            "bir",
+            "Det"
+          ],
+          [
+            "cümle",
+            "Noun"
+          ]
+        ]
+      },
+      "special_characters": {
+        "status": "success",
+        "input_length": 39,
+        "output_tokens": 5,
+        "result": [
+          [
+            "Çok",
+            "Noun"
+          ],
+          [
+            "çeşitli",
+            "Adj"
+          ],
+          [
+            "özel",
+            "Noun"
+          ],
+          [
+            "karakterler:",
+            "Noun"
+          ],
+          [
+            "@#$%^&*()",
+            "Noun"
+          ]
+        ]
+      }
+    }
+  },
+  "pos_coverage": {
+    "legacy": {
+      "unique_tags_found": 10,
+      "expected_tags_covered": 9,
+      "total_expected_tags": 12,
+      "coverage_percentage": 75.0,
+      "tags_found": [
+        "Postp",
+        "Verb",
+        "Pron",
+        "Noun",
+        "Det",
+        "Adj",
+        "Conj",
+        "Punc",
+        "Adv",
+        "Noun_Abl"
+      ],
+      "missing_expected_tags": [
+        "Interj",
+        "X",
+        "Num"
+      ],
+      "unexpected_tags": [
+        "Noun_Abl"
+      ]
+    },
+    "fine_tuned": {
+      "unique_tags_found": 11,
+      "expected_tags_covered": 7,
+      "total_expected_tags": 12,
+      "coverage_percentage": 58.333333333333336,
+      "tags_found": [
+        "Noun_Loc",
+        "Postp",
+        "Verb",
+        "Pron",
+        "Noun_Nom",
+        "Noun_Gen",
+        "Adj",
+        "Conj",
+        "Punc",
+        "Adv",
+        "Noun_Abl"
+      ],
+      "missing_expected_tags": [
+        "Interj",
+        "Noun",
+        "Det",
+        "X",
+        "Num"
+      ],
+      "unexpected_tags": [
+        "Noun_Loc",
+        "Noun_Nom",
+        "Noun_Gen",
+        "Noun_Abl"
+      ]
+    },
+    "berturk": {
+      "unique_tags_found": 9,
+      "expected_tags_covered": 9,
+      "total_expected_tags": 12,
+      "coverage_percentage": 75.0,
+      "tags_found": [
+        "Postp",
+        "Verb",
+        "Pron",
+        "Noun",
+        "Det",
+        "Adj",
+        "Conj",
+        "Punc",
+        "Adv"
+      ],
+      "missing_expected_tags": [
+        "Interj",
+        "X",
+        "Num"
+      ],
+      "unexpected_tags": []
+    }
+  },
+  "summary": {
+    "test_execution_time": 15.237048149108887,
+    "models_tested": 3,
+    "test_sentences": 19,
+    "timestamp": "2025-06-15T22:46:48.016238",
+    "successful_models": [
+      "legacy",
+      "fine_tuned",
+      "berturk"
+    ],
+    "failed_models": [],
+    "performance_comparison": {
+      "legacy": 203520.31421221668,
+      "fine_tuned": 853941.7615110887,
+      "berturk": 363.82940799932226
+    },
+    "recommendation": "Recommended model: fine_tuned"
+  }
+}
