@@ -1,6 +1,4 @@
 # -*- coding: cp1254 -*-
-
-# Onur Yilmaz
 import os
 import unittest
 import tempfile
@@ -38,14 +36,14 @@ class TestTagger(unittest.TestCase):
         self.tag = Tagger.load(self.filePath)
 
     def test_extract_using_tag(self):
-        exampleText = "Babası papazdı, ama bitkilere ve ziraata karşı ilgi duyuyordu"
-        result = [('Babası', 'Noun_Nom'),
-                    ('papazdı,', 'Noun_Nom'),
+        exampleText = "Babasï¿½ papazdï¿½, ama bitkilere ve ziraata karï¿½ï¿½ ilgi duyuyordu"
+        result = [('Babasï¿½', 'Noun_Nom'),
+                    ('papazdï¿½,', 'Noun_Nom'),
                     ('ama', 'Conj'),
                     ('bitkilere', 'Noun_Nom'),
                     ('ve', 'Conj'),
                     ('ziraata', 'Noun_Nom'),
-                    ('karşı', 'Adj'),
+                    ('karï¿½ï¿½', 'Adj'),
                     ('ilgi', 'Noun_Nom'),
                     ('duyuyordu', 'Verb')]
         resultZip = zip((item[0] for item in result), (item[1] for item in result))
@@ -54,14 +52,14 @@ class TestTagger(unittest.TestCase):
         self.assertListEqual(list(resultZip), list(extractedResult))
 
     def test_extract_using_text(self):
-        exampleText = "Babası papazdı, ama bitkilere ve ziraata karşı ilgi duyuyordu"
-        result = [('Babası', 'Noun_Nom'),
-                  ('papazdı,', 'Noun_Nom'),
+        exampleText = "Babasï¿½ papazdï¿½, ama bitkilere ve ziraata karï¿½ï¿½ ilgi duyuyordu"
+        result = [('Babasï¿½', 'Noun_Nom'),
+                  ('papazdï¿½,', 'Noun_Nom'),
                   ('ama', 'Conj'),
                   ('bitkilere', 'Noun_Nom'),
                   ('ve', 'Conj'),
                   ('ziraata', 'Noun_Nom'),
-                  ('karşı', 'Adj'),
+                  ('karï¿½ï¿½', 'Adj'),
                   ('ilgi', 'Noun_Nom'),
                   ('duyuyordu', 'Verb')]
         extractedResult = self.tag(exampleText)

@@ -1,7 +1,5 @@
 # -*- coding: cp1254 -*-
 
-# Onur Yilmaz
-
 # Imports
 import yaml
 import os

@@ -1,7 +1,5 @@
 # -*- coding: cp1254 -*-
 
-# Onur Yilmaz
-
 # Imports
 from Tagger import Tagger
 

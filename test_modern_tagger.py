@@ -54,6 +54,14 @@ class TestModernTurkishPOSTagger(unittest.TestCase):
             print("✅ Modern tagger initialized successfully")
         except Exception as e:
             print(f"⚠️  Modern tagger initialization failed: {e}")
+            
+        # Test fine-tuned model
+        try:
+            fine_tuned_tagger = ModernTurkishPOSTagger(model_type="fine_tuned")
+            self.assertIsNotNone(fine_tuned_tagger)
+            print("✅ Fine-tuned tagger initialized successfully")
+        except Exception as e:
+            print(f"⚠️  Fine-tuned tagger initialization failed: {e}")
     
     def test_basic_tagging(self):
         """Test basic tagging functionality"""

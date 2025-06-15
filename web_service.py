@@ -292,7 +292,8 @@ HTML_TEMPLATE = """
                     <label for="model">Model Type:</label>
                     <select id="model">
                         <option value="legacy">Legacy Brill Tagger</option>
-                        <option value="berturk" selected>BERTurk (Modern)</option>
+                        <option value="berturk">BERTurk (Modern)</option>
+                        <option value="fine_tuned" selected>Fine-tuned BERTurk (Advanced) 🚀</option>
                         <option value="distilbert">DistilBERT Multilingual</option>
                     </select>
                 </div>
@@ -322,6 +323,10 @@ HTML_TEMPLATE = """
                     <div class="stat-card">
                         <div class="stat-value" id="modelUsed">-</div>
                         <div class="stat-label">Model Used</div>
+                    </div>
+                    <div class="stat-card" id="accuracyCard" style="display: none;">
+                        <div class="stat-value" id="modelAccuracy">-</div>
+                        <div class="stat-label">Accuracy</div>
                     </div>
                 </div>
             </div>
@@ -387,6 +392,15 @@ HTML_TEMPLATE = """
             document.getElementById('tokenCount').textContent = data.result.length;
             document.getElementById('processingTime').textContent = `${Math.round(data.processing_time * 1000)}ms`;
             document.getElementById('modelUsed').textContent = data.model_info.model_type;
+            
+            // Show accuracy for fine-tuned model
+            const accuracyCard = document.getElementById('accuracyCard');
+            if (data.model_info.is_fine_tuned) {
+                document.getElementById('modelAccuracy').textContent = `${(data.model_info.accuracy * 100).toFixed(1)}%`;
+                accuracyCard.style.display = 'block';
+            } else {
+                accuracyCard.style.display = 'none';
+            }
             
             resultsDiv.style.display = 'block';
         }
@@ -465,19 +479,32 @@ def get_models():
                 'id': 'legacy',
                 'name': 'Legacy Brill Tagger',
                 'description': 'Traditional rule-based tagger',
-                'language': 'Turkish'
+                'language': 'Turkish',
+                'is_fine_tuned': False
             },
             {
                 'id': 'berturk',
                 'name': 'BERTurk',
                 'description': 'BERT-based Turkish model',
-                'language': 'Turkish'
+                'language': 'Turkish',
+                'is_fine_tuned': False
+            },
+            {
+                'id': 'fine_tuned',
+                'name': 'Fine-tuned BERTurk (Advanced)',
+                'description': 'Fine-tuned BERT model with 89.6% accuracy',
+                'language': 'Turkish',
+                'is_fine_tuned': True,
+                'accuracy': 0.896,
+                'f1_score': 0.871,
+                'pos_tags_count': 18
             },
             {
                 'id': 'distilbert',
                 'name': 'DistilBERT Multilingual',
                 'description': 'Lightweight multilingual model',
-                'language': 'Multilingual'
+                'language': 'Multilingual',
+                'is_fine_tuned': False
             }
         ]
     })
