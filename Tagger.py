@@ -19,7 +19,7 @@ class Tagger:
             raise FileNotFoundError("The model file: {} not found.".format(modelFile))
         try:
             with open(modelFile) as file:
-                myTagger = yaml.load(file)
+                myTagger = yaml.load(file, Loader=yaml.UnsafeLoader)
             if not isinstance(myTagger, BrillTagger):
                 raise TypeError("The model file: {} could not be loaded as a nltk.tag.brill.BrillTagger object".format(
                     modelFile
@@ -48,7 +48,7 @@ class Tagger:
         # Zip input and tags
         temp_list = zip([t for t in sentence.split()], tag_list)
 
-        return temp_list
+        return list(temp_list)
 
     # Make the initiated class callable in the same way as a function
     def __call__(self, sentence):

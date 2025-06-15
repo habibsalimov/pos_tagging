@@ -1,35 +1,89 @@
-## Part-of-Speech (POS) Tagger for Turkish
+# 🔤 Modern Turkish POS Tagger
 
-### Build and Run
-* [Python](https://www.python.org/) and [NLTK](http://www.nltk.org/) is necessary to build and run this project.
- * Python (works with 2.7.11)
- * NLTK (works with 3.2.5)
-* The module is named as `pos_tagger` and for the given sentence `tag(sentence)` will return `(word, tag)` pairs.
-* The system is trained with the development file provided in [CENG463 course](https://cow.ceng.metu.edu.tr/Courses/index.php?course=ceng463&semester=20121) it includes 5110 sentences. Dataset originally belongs to [Turkish UD treebank](http://tedlab.mit.edu/datasets/cliqs/ud-treebanks-v2.0/tr/).
-* For training:
-```
-python training_tagger.py
-```
-* Example:
+[![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org)
+[![Transformers](https://img.shields.io/badge/🤗-Transformers-yellow.svg)](https://huggingface.co/transformers)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-```
->>> from pos_tagger import tag
->>> tag('Bunu başından beri biliyordum zaten .')
-[('Bunu', 'Pron'), ('başından', 'Noun_Abl'), ('beri', 'Postp'), ('biliyordum', 'Verb'), ('zaten', 'Adv'), ('.', 'Punc')]
+A **modern, high-performance** Part-of-Speech (POS) tagger for Turkish language, featuring both traditional and state-of-the-art transformer-based approaches. This project modernizes the original Brill tagger implementation with cutting-edge NLP technologies.
+
+## 🌟 Features
+
+### 🚀 **Multiple Model Support**
+- **🧠 BERTurk**: State-of-the-art Turkish BERT model
+- **⚡ DistilBERT**: Lightweight multilingual model  
+- **📚 Legacy Brill**: Original rule-based tagger (backward compatibility)
+
+### 🎯 **Modern Architecture**
+- **Python 3.9+** compatibility
+- **Type hints** and modern code practices
+- **Modular design** with clean separation of concerns
+- **Comprehensive error handling** and logging
+
+### 🌐 **Web Interface & API**
+- **Beautiful web interface** with real-time tagging
+- **RESTful API** endpoints
+- **Batch processing** support
+- **Docker containerization**
+
+### 📊 **Advanced Analytics**
+- **Performance benchmarking** tools
+- **Comparative analysis** between models
+- **Detailed evaluation metrics**
+- **Visualization dashboards**
+
+## 🚀 Quick Start
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/turkish-pos-tagger.git
+cd turkish-pos-tagger
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-### Build and Run Using Docker
+### Basic Usage
+
+```python
+from modern_pos_tagger import ModernTurkishPOSTagger
+
+# Initialize with different models
+tagger = ModernTurkishPOSTagger(model_type="berturk")  # or "legacy", "distilbert"
+
+# Tag a sentence
+result = tagger.tag("Bunu başından beri biliyordum zaten .")
+print(result)
+# Output: [('Bunu', 'Pron'), ('başından', 'Noun'), ('beri', 'Postp'), ...]
 ```
-docker build -t tagger .
-docker run -it tagger python
+
+### Web Interface
+
+```bash
+# Start the web service
+python web_service.py
+
+# Open your browser to http://localhost:8000
 ```
-When the shell is opened:
+
+![Web Interface Demo](img/web_interface_demo.png)
+
+## 🐳 Docker Support
+
+### Quick Run
+```bash
+# Build and run with Docker
+docker build -t modern-turkish-tagger .
+docker run -p 8000:8000 modern-turkish-tagger
 ```
->>> from pos_tagger import tag
->>> tag('Bunu başından beri biliyordum zaten .')
-[('Bunu', 'Pron'), ('başından', 'Noun_Abl'), ('beri', 'Postp'), ('biliyordum', 'Verb'), ('zaten', 'Adv'), ('.', 'Punc')]
+
+### Development
+```bash
+# Run with volume mounting for development
+docker run -v $(pwd):/app -p 8000:8000 modern-turkish-tagger
 ```
-![](img/screencast.gif)
 
 ### Implementation Idea
 
